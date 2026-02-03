@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.6">
+  <diagram id="GRd6Yhnf8BJU112BtZzJ" name="Page-1">
+    <mxGraphModel dx="4060" dy="2397" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Project Architecture Flow &lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="260" x="-60" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Data Entity Diagram&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="320" x="-68" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-96" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=33;pointerEvents=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;br&gt;&lt;b data-path-to-node=&quot;11&quot; data-index-in-node=&quot;0&quot;&gt;&lt;font style=&quot;color: rgb(255, 102, 102);&quot;&gt;The Core Problem&lt;/font&gt;&lt;/b&gt;&lt;br&gt;In modern manufacturing, knowing a machine &lt;i data-path-to-node=&quot;11&quot; data-index-in-node=&quot;60&quot;&gt;will&lt;/i&gt; fail isn&#39;t enough. Engineers need to know &lt;b data-path-to-node=&quot;11&quot; data-index-in-node=&quot;107&quot;&gt;why&lt;/b&gt; (e.g., Is it the heat or the vibration?) so they can fix it before the line stops. Standard AI is a &quot;black box&quot; that doesn&#39;t give reasons.&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="146" width="1240" x="169" y="-548" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-97" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;p data-path-to-node=&quot;12&quot;&gt;&lt;b data-path-to-node=&quot;12&quot; data-index-in-node=&quot;0&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Our Solution (The 3-Pillar Approach)&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;ol start=&quot;1&quot; data-path-to-node=&quot;13&quot;&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;13,0,0&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;b data-path-to-node=&quot;13,0,0&quot; data-index-in-node=&quot;0&quot;&gt;The Intelligence (Engine):&lt;/b&gt; Member A builds a &quot;Model Zoo&quot; of 5 different AI models. Instead of just picking one, the system uses &lt;b data-path-to-node=&quot;13,0,0&quot; data-index-in-node=&quot;128&quot;&gt;SHAP (Shapley Additive Explanations)&lt;/b&gt; to break down exactly how much credit each sensor (Temperature, Pressure, etc.) gets for a specific failure prediction.&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;13,1,0&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;b data-path-to-node=&quot;13,1,0&quot; data-index-in-node=&quot;0&quot;&gt;The Trust (Validation):&lt;/b&gt; Most XAI projects stop at the graph. Member B adds a &lt;b data-path-to-node=&quot;13,1,0&quot; data-index-in-node=&quot;77&quot;&gt;Validation Layer&lt;/b&gt;. It mathematically checks if the AI&#39;s &quot;reason&quot; matches the physics of the data. If the explanation is unstable or &quot;unfaithful,&quot; the system flags it as untrustworthy.&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p data-path-to-node=&quot;13,2,0&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;b data-path-to-node=&quot;13,2,0&quot; data-index-in-node=&quot;0&quot;&gt;The Experience (Digital Twin):&lt;/b&gt; Instead of looking at boring spreadsheets, the user interacts with a &lt;b data-path-to-node=&quot;13,2,0&quot; data-index-in-node=&quot;100&quot;&gt;3D Digital Twin&lt;/b&gt; of the factory. If the AI detects a high risk of failure due to Vibration, the 3D model of that specific machine physically shakes in the dashboard, making the data intuitive for non-technical factory floor managers.&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p data-path-to-node=&quot;14&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;b data-path-to-node=&quot;14&quot; data-index-in-node=&quot;0&quot;&gt;The Synergy&lt;/b&gt;&lt;br&gt;By splitting the project this way, Member A ensures the math is cutting-edge and fast, while Member B ensures the insights are actionable and scientifically verified.&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="296" width="1460" x="178" y="-386" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-98" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Member A: Python/FastAPI" vertex="1">
+          <mxGeometry height="228" width="556" x="1539" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-99" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Member B: Node/Express" vertex="1">
+          <mxGeometry height="205" width="1043" x="776" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-100" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="User Browser" vertex="1">
+          <mxGeometry height="194" width="634" x="-1" y="81" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-101" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="EJS Templates + CSS" vertex="1">
+          <mxGeometry height="54" width="204" x="403" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-102" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Client-side Chart.js / Three.js" vertex="1">
+          <mxGeometry height="78" width="260" x="11" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-103" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Express Routes" vertex="1">
+          <mxGeometry height="54" width="166" x="801" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-104" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Axios/Fetch Manager" vertex="1">
+          <mxGeometry height="54" width="210" x="1120" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-105" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="EJS Rendering Engine" vertex="1">
+          <mxGeometry height="54" width="212" x="1573" y="127" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-106" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="XGBoost/TabNet Models" vertex="1">
+          <mxGeometry height="54" width="231" x="1557" y="443" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-107" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="SHAP/XAI Processor" vertex="1">
+          <mxGeometry height="54" width="200" x="1869" y="347" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-108" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Synthetic Dataset" vertex="1">
+          <mxGeometry height="54" width="186" x="1876" y="451" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-109" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-101" style="curved=1;startArrow=none;endArrow=block;exitX=0.96;exitY=1;entryX=0;entryY=0.5;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-103" value="User Request">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="633" y="228" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-110" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-103" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-104" value="HTTP POST/GET">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-111" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-104" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.81;entryX=0.4;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-106" value="Request Explanation">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1441" y="260" />
+              <mxPoint x="1539" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-112" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-106" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0.18;entryY=1;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-107" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1844" y="426" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-113" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-107" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.19;entryX=1;entryY=0.5;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-104" value="JSON SHAP Values">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1844" y="353" />
+              <mxPoint x="1819" y="228" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-114" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-104" style="curved=1;startArrow=none;endArrow=block;exitX=0.99;exitY=0;entryX=0;entryY=0.79;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-105" value="Pass Data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1441" y="175" />
+              <mxPoint x="1539" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-115" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-105" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.28;entryX=0.82;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-101" value="Rendered HTML">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1539" y="138" />
+              <mxPoint x="633" y="138" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-116" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-102" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-101" value="Visualizes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-117" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Frontend Display" vertex="1">
+          <mxGeometry height="104" width="524" x="208" y="1101" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-118" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Node.js Processing" vertex="1">
+          <mxGeometry height="232" width="447" x="254" y="819" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-119" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Python Output" vertex="1">
+          <mxGeometry height="232" width="330" x="317" y="537" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-120" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Raw Dictionary" vertex="1">
+          <mxGeometry height="54" width="168" x="399" y="562" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-121" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="{ &#39;feature&#39;: &#39;Temp&#39;, &#39;impact&#39;: 0.85, &#39;prediction&#39;: &#39;Failure&#39; }" vertex="1">
+          <mxGeometry height="78" width="260" x="352" y="666" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-122" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Express Middleware" vertex="1">
+          <mxGeometry height="54" width="201" x="382" y="844" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-123" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="res.render(&#39;dashboard&#39;, { xaiData })" vertex="1">
+          <mxGeometry height="78" width="260" x="352" y="948" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-124" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="&amp;lt;%= xaiData.feature %&amp;gt;" vertex="1">
+          <mxGeometry height="54" width="227" x="243" y="1126" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-125" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Chart.js Dataset" vertex="1">
+          <mxGeometry height="54" width="177" x="520" y="1126" as="geometry" />
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-126" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-120" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-121" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-127" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-121" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-122" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-128" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-122" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-123" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-129" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-123" style="curved=1;startArrow=none;endArrow=block;exitX=0.21;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-124" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="356" y="1051" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FryNYFvuJFRB2pLlbwjs-130" edge="1" parent="1" source="FryNYFvuJFRB2pLlbwjs-123" style="curved=1;startArrow=none;endArrow=block;exitX=0.8;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="FryNYFvuJFRB2pLlbwjs-125" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="608" y="1051" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
