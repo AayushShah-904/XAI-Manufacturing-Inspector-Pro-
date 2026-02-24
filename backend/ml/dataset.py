@@ -2,9 +2,12 @@ import pandas as pd
 import numpy as np
 import os
 
-def build_training_sets(path=None):
+def build_training_sets(path=None, target_type='classification'):
     """
     Loads data from Excel or generates synthetic data if file not found.
+    Args:
+        path: Path to dataset Excel file
+        target_type: 'regression' for Target_Quality, 'classification' for Quality_Label
     Returns: X (DataFrame), y (Series)
     """
     if path is None:
@@ -17,7 +20,7 @@ def build_training_sets(path=None):
         'Temperature', 'Pressure', 'Speed', 'Vibration', 
         'Humidity', 'Power_Consumption', 'Material_Hardness'
     ]
-    target_col = 'Quality_Label'
+    target_col = 'Target_Quality' if target_type == 'regression' else 'Quality_Label'
 
     if os.path.exists(path):
         print(f" Loading dataset from {path}...")
